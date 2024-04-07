@@ -47,6 +47,7 @@ export const NewsLettersListItem = ({
   );
 
   const isProspect = subscriptions.length === 0 || !userHasSubscriptions;
+
   return (
     <Card>
       <CardHeader>

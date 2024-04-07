@@ -13,7 +13,13 @@ export const Users = {
   USER_WITHOUT_SUBSCRIPTION,
   USER_WITH_MULTIPLE_SUBSCRIPTION,
 };
-
+/**
+ * todo
+ * Implement units test
+ * Add comments to each components
+ * provide DisplayName for each components
+ * ...
+ */
 export const Newsletters = () => (
   <Container maxW="container.lg">
     <Stack gap={theme.space[4]}>
