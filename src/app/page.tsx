@@ -17,7 +17,15 @@ const Users = {
 
 const Sites = [...new Set(NEWSLETTER_ITEMS.map((item) => item.site))];
 
-const Loop = () => Sites.map((e) => <>{e}</>);
+const Loop = () =>
+  Sites.map((e) => (
+    <>
+      <h1>{e}</h1>
+      {NEWSLETTER_ITEMS.filter((c) => c.site === e).map((d) => {
+        return <>{JSON.stringify(d)}</>;
+      })}
+    </>
+  ));
 
 const page = () => {
   return (
