@@ -60,12 +60,14 @@ export const NewsLettersListItem = ({
             borderRadius="lg"
             sx={{ width: "100%" }}
           />
-          <Text fontSize="lg">{description}</Text>
+          <Text fontSize="lg" textAlign={"center"}>
+            {description}
+          </Text>
         </Stack>
       </CardBody>
-      <CardFooter>
-        <Button colorScheme={isProspect ? "yellow" : "blue"}>
-          {isProspect ? "Abonne toi" : "S'inscrire"}
+      <CardFooter justifyContent={"center"}>
+        <Button colorScheme={isProspect ? "yellow" : "red"}>
+          {isProspect ? "S'abonner" : "S'inscrire"}
         </Button>
       </CardFooter>
     </Card>

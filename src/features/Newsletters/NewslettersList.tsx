@@ -17,7 +17,7 @@ import {
 } from "@chakra-ui/react";
 
 import { NEWSLETTER_ITEMS } from "../../mocks/newsletters";
-import { NewsLettersListItem } from "./NewslettersListItem";
+import { NewsLettersListItem } from "./NewsLettersListItem";
 
 const Sites = [...new Set(NEWSLETTER_ITEMS.map((item) => item.site))];
 
