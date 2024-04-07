@@ -48,12 +48,15 @@ const Users = {
   USER_WITH_MULTIPLE_SUBSCRIPTION,
 };
 
+type ObjectUsers = keyof typeof Users;
+
 const Block = ({ image, title, description, subscriptions }: INewsLetter) => {
   const { currentUser } = usePageStore((state) => state);
-  const currentUserSubscriptions = Users[currentUser].subscriptions as [];
+  const currentUserSubscriptions = Users[currentUser as ObjectUsers]
+    .subscriptions as [];
 
   const userHasSubscriptions = subscriptions.every((e) =>
-    currentUserSubscriptions.includes(e)
+    (currentUserSubscriptions as string[]).includes(e)
   );
 
   return (
