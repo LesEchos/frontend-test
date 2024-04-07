@@ -15,7 +15,7 @@ export const Users = {
 };
 
 export const Newsletters = () => (
-  <Container>
+  <Container maxW="container.lg">
     <Stack gap={theme.space[4]}>
       <NewsLettersList />
     </Stack>

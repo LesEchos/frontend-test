@@ -30,10 +30,7 @@ export const NewsLettersList = () =>
             {e}
           </Highlight>
         </Heading>
-        <SimpleGrid
-          spacing={4}
-          templateColumns="repeat(auto-fill, minmax(200px, 1fr))"
-        >
+        <SimpleGrid spacing={4} columns={{ md: 2, lg: 3 }}>
           {NEWSLETTER_ITEMS.filter((c) => c.site === e).map((d, l) => {
             return <NewsLettersListItem key={`Block_${l}`} {...d} />;
           })}
