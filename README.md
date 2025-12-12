@@ -1,3 +1,18 @@
+
+# Les Echos Frontend Test By Mehdi Boussaid : 
+
+## Choices : 
+
+To be able to do this test in a limited time as said bellow, I made the flowing choices :
+
+- Next.js with Pages Router
+- CSS Modules for styling
+
+
+
+
+
+# THE TEST : 
 # Getting started
 
 Hello there, you are a new recruit in our frontend team at Les Echos, and your first task is to implement our newsletter page.
@@ -6,7 +21,7 @@ You can find the design on our [figma](https://www.figma.com/file/u1hoAP9FOa1FHb
 
 # Disclaimer
 
-Our evaluation focuses on your problem-solving approach and mindset, observing how you tackle challenges and prioritize tasks.
+Our evaluation focuses on your problem-solving approach and mindset, observing how you tackle challenges and prioritize tasks.`
 
 During the interview, explain your decisions and how you'd approach unfinished tasks with you had more time.
 
@@ -62,6 +77,6 @@ Take around 4 hours to do this test, we really respect your time and don't want 
 
 # Final word
 
-Good luck and again, please do this as you were already an developer in our team.
+Good luck and again, please do this as you were already a developer in our team.
 
 If you have any question feel free to contact us and we will quickly respond
