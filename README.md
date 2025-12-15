@@ -1,5 +1,16 @@
 # Les Echos Frontend Test By Mehdi Boussaid :
 
+## To start the project :
+
+```bash
+npm install
+npm run dev
+
+# run unit tests
+
+npm run test
+```
+
 ## Choices :
 
 To be able to do this test in a limited time as said bellow, I made the flowing choices :
@@ -15,7 +26,7 @@ To be able to do this test in a limited time as said bellow, I made the flowing 
 
 - Fo mocks/ SSR, I mocked the fetching functions in the getServerSideProps with some delay, no mocking library used.
 
-- For unit tests , I did some, does not cover all code. 
+- For unit tests , I did some, does not cover all code.
 
 # THE TEST :
 
