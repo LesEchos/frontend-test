@@ -1,0 +1,43 @@
+.group {
+  margin-bottom: 48px;
+}
+
+.siteTitle {
+  color: black;
+  font-size: 24px;
+  text-transform: uppercase;
+  padding-bottom: 8px;
+}
+
+.grid {
+  /* background-color: brown; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media (max-width: 700px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .siteTitle {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  .group {
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 450px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0;
+  }
+}

@@ -1,0 +1,36 @@
+.main {
+  min-height: 100vh;
+  background: white;
+  padding: 20px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+.content {
+  background: white;
+  padding: 40px 0;
+}
+
+.footer {
+  margin-top: 40px;
+}
+
+@media (max-width: 700px) {
+  .container {
+    padding: 0 16px;
+  }
+
+
+  .content {
+    padding: 20px;
+  }
+
+  .main {
+    padding: 10px 0;
+  }
+}

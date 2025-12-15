@@ -1,18 +1,15 @@
+# Les Echos Frontend Test By Mehdi Boussaid :
 
-# Les Echos Frontend Test By Mehdi Boussaid : 
-
-## Choices : 
+## Choices :
 
 To be able to do this test in a limited time as said bellow, I made the flowing choices :
 
 - Next.js with Pages Router
 - CSS Modules for styling
+- Two Break points : 700px and 450px
 
+# THE TEST :
 
-
-
-
-# THE TEST : 
 # Getting started
 
 Hello there, you are a new recruit in our frontend team at Les Echos, and your first task is to implement our newsletter page.

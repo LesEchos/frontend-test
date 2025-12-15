@@ -1,0 +1,114 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: antiquewhite; */
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.imageContainer {
+  position: relative;
+  height: 250px;
+  background: lightgray;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.title {
+  color: white;
+  font-size: 36px;
+  text-align: center;
+  text-shadow: 1px 1px 2px black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.description {
+  padding: 30px;
+  margin: 0;
+  color: black;
+  flex-grow: 1;
+  font-size: 18px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  padding: 15px 40px;
+  border: none;
+  border-radius: 50px;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.subscribeButton {
+  background: var(--les-echos-primary);
+  color: white;
+}
+
+.upgradeButton {
+  background: var(--abonnement-jaune);
+  color: black;
+}
+
+@media (max-width: 700px) {
+  .title {
+    font-size: 24px;
+    padding: 15px;
+  }
+
+  .description {
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  .button {
+    margin: 0 15px 15px 15px;
+    width: calc(100% - 30px);
+  }
+
+  .imageContainer {
+    height: 200px;
+  }
+}
+
+@media (max-width: 700px) {
+  .card {
+    width: 45vw;
+  }
+}
+
+@media (max-width: 450px) {
+  .card {
+    width: 100%;
+    margin: 0;
+  }
+
+  .title {
+    padding: 10px;
+    font-size: 20px;
+  }
+
+  .description {
+    padding: 10px;
+  }
+
+  .button {
+    margin: 0 10px 10px 10px;
+    padding: 12px 20px;
+  }
+}
