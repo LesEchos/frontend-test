@@ -1,26 +1,26 @@
-import { useState } from "react";
-import { GetServerSideProps } from "next";
 import Head from "next/head";
-import { Newsletter, User, UserType, GroupedNewsletters } from "@/types";
+import { GetServerSideProps } from "next";
+import { Newsletter, User, GroupedNewsletters } from "@/types";
 import {
   getNewsletters,
-  getUserByType,
+  getCurrentUser,
   groupNewslettersBySite,
 } from "@/services/newsletterService";
 import Header from "@/components/Header";
-import UserSelector from "@/components/UserSelector";
 import NewsletterGroup from "@/components/NewsletterGroup";
 import styles from "./Index.module.css";
 
 type HomePageProps = {
   newsletters: Newsletter[];
+  user: User;
+  groupedNewsletters: GroupedNewsletters;
 };
 
-export default function HomePage({ newsletters }: HomePageProps) {
-  const [selectedUserType, setSelectedUserType] = useState<UserType>("none");
-  const user = getUserByType(selectedUserType);
-  const groupedNewsletters = groupNewslettersBySite(newsletters);
-
+export default function HomePage({
+  newsletters,
+  user,
+  groupedNewsletters,
+}: HomePageProps) {
   return (
     <>
       <Head>
@@ -48,25 +48,31 @@ export default function HomePage({ newsletters }: HomePageProps) {
               )
             )}
           </div>
-
-          <div className={styles.footer}>
-            <UserSelector
-              selectedUser={selectedUserType}
-              onUserChange={setSelectedUserType}
-            />
-          </div>
         </div>
       </main>
     </>
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async () => {
-  const newsletters = await getNewsletters();
+export const getServerSideProps: GetServerSideProps<HomePageProps> = async (
+  context
+) => {
+  const rawUserType = context.query.userType;
+  const allowed = ["single", "multiple", "none"] as const;
+  const mockUserType =
+    typeof rawUserType === "string" && allowed.includes(rawUserType as any)
+      ? (rawUserType as (typeof allowed)[number])
+      : "none";
+  const [newsletters, user] = await Promise.all([
+    getNewsletters(),
+    getCurrentUser(mockUserType),
+  ]);
 
   return {
     props: {
       newsletters,
+      user,
+      groupedNewsletters: groupNewslettersBySite(newsletters),
     },
   };
 };

@@ -7,6 +7,10 @@ To be able to do this test in a limited time as said bellow, I made the flowing 
 - Next.js with Pages Router
 - CSS Modules for styling
 - Two Break points : 700px and 450px
+- To see diffrent user Rights and the effect on the UI :
+  - User None: localhost:3000/?userType=none
+  - User Single: localhost:3000/?userType=single
+  - User Multiple: localhost:3000/?userType=multiple
 
 # THE TEST :
 
